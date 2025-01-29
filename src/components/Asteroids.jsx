@@ -23,19 +23,19 @@ function Asteroids() {
       });
   }, []);
 
-  if (loading) return <p>Yükleniyor...</p>;
-  if (error) return <p>Bir hata oluştu.</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error.</p>;
 
   return (
     <div style={styles.container}>
-      <h2>Yaklaşan Asteroitler</h2>
+      <h2>Approaching Asteroitler</h2>
       <ul style={styles.list}>
         {asteroids.slice(0, 10).map(asteroid => (
           <li key={asteroid.id} style={styles.item}>
-            <p><strong>Ad:</strong> {asteroid.name}</p>
-            <p><strong>Büyüklük:</strong> {asteroid.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2)} km</p>
-            <p><strong>Yaklaşma Tarihi:</strong> {asteroid.close_approach_data[0].close_approach_date}</p>
-            <p><strong>Risk:</strong> {asteroid.is_potentially_hazardous_asteroid ? 'Tehlikeli' : 'Tehlikesiz'}</p>
+            <p><strong>Name:</strong> {asteroid.name}</p>
+            <p><strong>Size:</strong> {asteroid.estimated_diameter.kilometers.estimated_diameter_max.toFixed(2)} km</p>
+            <p><strong>Approach Date:</strong> {asteroid.close_approach_data[0].close_approach_date}</p>
+            <p><strong>Risk:</strong> {asteroid.is_potentially_hazardous_asteroid ? 'Danger' : 'Non-Danger'}</p>
           </li>
         ))}
       </ul>

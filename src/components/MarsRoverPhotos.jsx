@@ -55,16 +55,16 @@ function App() {
           />
         </div>
         <div style={styles.formGroup}>
-          <label>Kamera:</label>
+          <label>Camera:</label>
           <input
             style={styles.input}
             type="text"
             value={camera}
             onChange={(e) => setCamera(e.target.value)}
-            placeholder="Örneğin: FHAZ"
+            placeholder="Example: FHAZ"
           />
         </div>
-        <button style={styles.button} type="submit">Fotoğrafları Getir</button>
+        <button style={styles.button} type="submit">Get Photos</button>
       </form>
 
       {loading && <div>Loading...</div>}

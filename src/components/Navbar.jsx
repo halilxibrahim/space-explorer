@@ -11,7 +11,7 @@ function Navbar() {
     <nav style={styles.nav}>
       <h2 style={styles.title}>
         <Link to="/" style={styles.logoLink}>
-          🚀 Space Explorer
+          Space Explorer
         </Link>
       </h2>
       <div style={styles.links}>
